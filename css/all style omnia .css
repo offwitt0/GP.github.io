@@ -1,0 +1,143 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+}
+
+/* sign up doctor */
+
+.container-fluid{
+    display: flex;
+    justify-content: center;
+    margin-top: 3;
+}
+.box21{
+    width: 500px;
+    height: 600px;
+    left: 60px;
+    text-align: center;
+    background-color:#FFFFFF;
+}
+
+.welcomdoctor{
+    color:#003470;
+    text-align: center;
+}
+
+.doctor{
+    color:#4789d4;
+    text-align: center;
+}
+
+
+div img{
+    width: 350px;
+    height: 300px;
+    margin-top: 100px;
+}
+
+.box22 {
+    background-color: #dbecf0;
+    width: 500px;
+    height: 600px;
+    left: 839px;
+    text-align: center;
+}
+.was-validated{
+    width: 350px;
+    
+}
+.name{
+    color: #756E6E;
+}
+h2{
+    color: #003470;
+    text-align: center;
+}
+.btn{
+    background-color: #FC566C;
+    margin-top: 40px;
+    border:#FC566C solid 10px;
+    border-radius:  10px;
+} 
+h6{
+    text-align: center;
+}
+
+.linklogindoctor{
+    color: #756E6E;
+    margin-top: 20px;
+}
+
+.alinklogindoctor{
+    color:#00B3DE;
+}
+
+/* login doctor*/
+
+.linksignupdoctor{
+    color: #756E6E;
+    margin-top: 20px;
+}
+
+.alinksignupdoctor{
+    color:#00B3DE;
+}
+
+/* sign up user */
+.welcomuser{
+    color: #003470;
+}
+@media (max-width: 767px) {
+    .box21 {
+      display: none;
+    }
+  }
+/* sign up & login style */
+
+.brainheart{
+    width: 400px;
+    height:450px;
+}
+.box2{
+        background-color: #dbecf0;
+        width: 500px;
+        height: 600px;
+        left: 839px;
+    }
+
+.smallbox{
+    background-color: #FFFFFF;
+    width: 240px;
+    height: 150px;
+    border-radius: 20px;
+    margin-left: 150px;
+    margin-top: 200px;
+    box-sizing: border-box;
+}
+
+div .smallbox h2.signupas{
+    text-align: center;
+    margin-top: 100px;
+    color: #003470;
+
+}
+.userdoctor{
+    display: flex;
+    text-align: center;
+    color: #474747;
+}
+.User{
+    margin-left: 40px;
+}
+.Doctor{
+    margin-left: 45px;
+}
+.icon1111{
+    font-size: 24px;
+    margin-top: 10px;
+    text-align: center;
+}

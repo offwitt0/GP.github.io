@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>dashboard doctor</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/all.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="css/bootstrap.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <header class="d-flex justify-content-between align-items-center">
+                    <div class="date-search">
+                        <label>Appointment for day</label>
+                        <input type="date" id="date" name="date">
+                        <button class="btn btn-primary"><i class="fa fa-search"></i></button>
+                    </div>
+                    <div id="vesa3" class="d-flex align-items-center">
+                        <label>search by patient Id</label>
+                        <input type="text" class="form-control me-2" placeholder="Search">
+                        <button class="btn btn-primary"><i class="fa fa-search"></i></button>
+                    </div>
+                </header>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-2 col-md-3 col-sm-6">
+                <div class="profile">
+                    <img src="./images/Frame 2076.jpg" alt="Doctor Image" class="profile-img">
+                    <h2 class="profile-name">Dr.Ahmed Yousef</h2>
+                </div>
+            </div>
+            <div id="colll" class="col-lg-10 col-md-9 col-sm-6">
+                <br><br><br>
+                <h3 class="afnan">Appointments</h3>
+                <table class="table">
+                    <thead>
+                        <tr class="afnan">
+                            <th>Patient Name</th>
+                            <th>Appointment Date</th>
+                            <th>time</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>John Doe</td>
+                            <td>2022-02-23</td>
+                            <td>11:00</td>
+                            <td><button class="btn btn-outline-primary details-btn">Dr`s appointment</button></td>
+                        </tr>
+                        <tr>
+                            <td>Jane Smith</td>
+                            <td>2022-02-25</td>
+                            <td>12:00</td>
+                            <td><button class="btn btn-outline-primary details-btn">Dr`s appointment</button></td>
+                        </tr>
+                        <tr>
+                            <td>Jane Smith</td>
+                            <td>2022-02-25</td>
+                            <td>12:00</td>
+                            <td><button class="btn btn-outline-primary details-btn">Dr`s appointment</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table border="3" class="table details-table" style="display:none;">
+                    <thead>
+                        <tr>
+                            <th>Name of day</th>
+                            <th>From hour</th>
+                            <th>To hour</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>saturday</td>
+                            <td>8:00am</td>
+                            <td>2:00pm</td>
+                        </tr>
+                        <tr>
+                            <td>sunday</td>
+                            <td>5:00pm</td>
+                            <td>7:00pm</td>
+                        </tr>
+                        <tr>
+                            <td>monday</td>
+                            <td>4:00pm</td>
+                            <td>11:00pm</td>
+                        </tr>
+                        <tr>
+                            <td>tuesday</td>
+                            <td>10:00am</td>
+                            <td>9:00pm</td>
+                        </tr>
+                        <tr>
+                            <td>wendesday</td>
+                            <td>1:00pm</td>
+                            <td>12:00am</td>
+                        </tr>
+                        <tr>
+                            <td>thursday</td>
+                            <td>6:00am</td>
+                            <td>8:00pm</td>
+                        </tr>
+                        <!-- Add more rows as needed -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+          
+<script src="js/popper.min.js"></script>
+ <script src="js/jquery-3.7.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
