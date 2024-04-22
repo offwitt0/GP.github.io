@@ -109,3 +109,26 @@ function openNav() {
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
+//////////////////////////////////////
+document.getElementById('message2').addEventListener('click', function() {
+    var message = document.getElementById('white2').value;
+    if (message.trim() !== '') {
+        var newMessage = document.createElement('div');
+        newMessage.textContent = message;
+        document.getElementById('chatMessages').appendChild(newMessage);
+        document.getElementById('white2').value = '';
+    }
+});
+document.getElementById('message5').addEventListener('click', function() {
+    // قم بتشغيل تسجيل الصوت وإرساله في الدردشة
+});
+document.querySelectorAll('.khan').forEach(function(element) {
+    element.addEventListener('click', function() {
+        var personName = this.querySelector('.nmj1').textContent;
+        document.getElementById('chatTitle').textContent = personName;
+        // عرض الدردشة مع الشخص المحدد
+    });
+});
+////////////////////////
+
+

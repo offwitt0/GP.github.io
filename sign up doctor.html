@@ -25,33 +25,29 @@
                     <form action="post" class="was-validated">
                         <div class="form-group">
                             <label class="name">Name</label>
-                            <input type="text" class="form-control" placeholder="Enter your full name." required>
+                            <input type="text" id="name33" class="form-control" placeholder="Enter your full name." required>
                         </div>
                         <div class="form-group">
                             <label class="name">Id</label>
-                            <input type="number" class="form-control" placeholder="Enter your Id number." required>
+                            <input type="num" id="idd" class="form-control" placeholder="Enter your Id number." required>
                         </div>
                         <div class="form-group">
-                            <label class="name">Phone</label>
-                            <input type="text" class="form-control" placeholder="Enter your phone number." required>
-                        </div>
-                        <div class="form-group">
-                            <label class="name">Proof of a doctoral degree</label>
-                            <input type="text" class="form-control" placeholder="Write  details & Upload." required>
+                            <label class="name">Syndicate Card</label>
+                            <input type="file" id="syndicate"   accept="all" class="form-control"  required>
                         </div>
                         <div class="form-group">
                             <label class="name"> Specialization</label>
-                            <input type="text" class="form-control" placeholder="Enter your Specialization ." required>
+                            <input type="text" id="specialization" class="form-control" placeholder="Enter your Specialization ." required>
                         </div>
                         <div class="form-group">
-                            <div class="name"> Email</div>
-                            <input type="text"class="form-control" placeholder="Enter your email."required>
+                            <div class="name"> Email/phone</div>
+                            <input type="text" id="emailorphone" class="form-control" placeholder="Enter your email or phone."required>
                         </div>
                         <div class="form-group">
                             <label class="name"> Password</label>
-                            <input type="password" class="form-control" placeholder="Enter your password." required>
+                            <input type="password" id="password" class="form-control" placeholder="Enter your password." required>
                         </div>
-                        <a href="login doctor.html" id="labla" class="btn btn-block btn-danger" role="button">sign up</a>
+                        <a href="#" id="labla" class="btn btn-block btn-danger" role="button">sign up</a>
                     </form>
                 </div>
                 <div class="linklogindoctor">
@@ -64,5 +60,31 @@
 
     </div>
 </body>
-
 </html>
+<script>
+    let nameInput = document.querySelector("#name33");
+let idInput = document.querySelector("#idd");
+let syndicateInput = document.querySelector("#syndicate");
+let specializationInput = document.querySelector("#specialization");
+let emailOrPhoneInput = document.querySelector("#emailorphone");
+let passwordInput = document.querySelector("#password");
+let signUpBtn = document.querySelector("#labla");
+
+signUpBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+    if (nameInput.value === "" || idInput.value === "" || syndicateInput.value === "" || specializationInput.value === "" || emailOrPhoneInput.value === "" || passwordInput.value === "") {
+        alert("Please fill in all fields");
+    } else {
+        console.log("Name:", nameInput.value);
+        console.log("ID:", idInput.value);
+        console.log("Syndicate Card:", syndicateInput.files[0].name);
+        console.log("Specialization:", specializationInput.value);
+        console.log("Email/Phone:", emailOrPhoneInput.value);
+        console.log("Password:", passwordInput.value);
+
+        setTimeout(() => {
+            window.location = "login doctor.html";
+        }, 2000);
+    }
+});
+</script>

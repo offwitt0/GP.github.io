@@ -19,37 +19,99 @@
             <p class="prova"> Providing a notification to remind the patient for his medication time.:</p>
         </div>
         <div id="alaa" class="container">
-            <table class="table table-hover">
-                <thead>
-                    <tr>
-                        <th>Medication name</th>
-                        <th>Number of occurrence</th>
-                        <th>Start from</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Bevacizumab</td>
-                        <td>2</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Larotrectinib</td>
-                        <td>2</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Temodal</td>
-                        <td>2</td>
-                        <td></td>
-                    </tr>
-                </tbody>
-            </table>
-            <button type="button" class="btn btn-outline-danger btn-lg">Save</button>
+            <div style="overflow-x:auto;">
+                <table  class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Medication name</th>
+                            <th>Number of occurrence</th>
+                            <th>Start from</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+              </div>
+            <button type="button" class="btn btn-outline-danger btn-lg mt-3">Save</button>
         </div>
     </div>
-    
-
 </body>
 
 </html>
+<script>
+let medicationNameCells = document.querySelectorAll("tbody tr td:nth-child(1)");
+medicationNameCells.forEach(cell => {
+    let input = document.createElement("input");
+    input.type = "text";
+    input.value = cell.textContent;
+    cell.textContent = "";
+    cell.appendChild(input);
+});
+let numberOfOccurrenceCells = document.querySelectorAll("tbody tr td:nth-child(2)");
+numberOfOccurrenceCells.forEach(cell => {
+    let input = document.createElement("input");
+    input.type = "number";
+    input.value = cell.textContent;
+    cell.textContent = "";
+    cell.appendChild(input);
+});
+let startFromCells = document.querySelectorAll("tbody tr td:nth-child(3)");
+startFromCells.forEach(cell => {
+    let input = document.createElement("input");
+    input.type = "time";
+    cell.textContent = "";
+    cell.appendChild(input);
+});
+let table = document.querySelector(".table");
+let plusButton = document.createElement("button");
+plusButton.textContent = "+";
+plusButton.className = "btn  btn-sm"; 
+plusButton.style.position = "absolute"; 
+plusButton.style.bottom = "0"; 
+plusButton.style.right = "0"; 
+plusButton.style.marginBottom = "0"; 
+plusButton.addEventListener("click", function() {
+    let newRow = document.createElement("tr");
+    let cells = ["", "", ""];
+    cells.forEach((content, index) => {
+        let cell = document.createElement("td");
+        if (index === 0) {
+            let input = document.createElement("input");
+            input.type = "text";
+            cell.appendChild(input);
+        } else if (index === 1) {
+            let input = document.createElement("input");
+            input.type = "number";
+            cell.appendChild(input);
+        } else if (index === 2) {
+            let input = document.createElement("input");
+            input.type = "time";
+            cell.appendChild(input);
+        }
+        newRow.appendChild(cell);
+    });
+    table.querySelector("tbody").appendChild(newRow);
+});
+table.style.position = "relative"; 
+table.appendChild(plusButton);
+</script>

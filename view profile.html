@@ -10,29 +10,54 @@
 
 </head>
 <body>
+ 
   <div class="container-fluid">
     <div class="row justify-content-center">
-     <div class="view">
-         <div class="booes1"></div><!--booes-->
-     </div><!--view-->
-     <div id="boot3" class="card">
-      <h1 id="profiletitle" class="card-title">Dr.Maged Adel</h1>
-      <p id=""  class="card-text"> Dr.Maged Adel has 15 years of experience in the practical
-         field he is also a doctor at the canadian universityand has his own clinic</p>
-         <h4>Working time<br> (sat 09:00am-07:00pm)</h4>
-         <div id="btn12">
-         
-      <a href="chatwithdoctor.html"><button id="btn13" class="btn">Message</button></a>
-     </div>
-     
-     </div><!--boot3-->
+        <div class="view d-none d-md-block">
+            <div class="booes1"></div><!--booes-->
+        </div><!--view-->
+        <div id="boot3" class="card">
+            <h1 id="profiletitle" class="card-title">Dr.Maged Adel</h1>
+            <p id=""  class="card-text"> Dr.Maged Adel has 15 years of experience in the practical
+                field he is also a doctor at the canadian universityand has his own clinic</p>
+            <label for="working-time">Working time</label>
+            <div class="input-group">
+                <input type="time" id="working-time-from" name="working-time-from" class="form-control">
+                <span class="input-group-text">to</span>
+                <input type="time" id="working-time-to" name="working-time-to" class="form-control">
+            </div>
+            <div id="btn12">
+                <a href="chatwithdoctor.html"><button id="btn13" class="btn">Message</button></a>
+            </div>
+            <ul class="ratings">
+                <li class="star"></li>
+                <li class="star"></li>
+                <li class="star"></li>
+                <li class="star"></li>
+                <li class="star"></li>
+            </ul>
+        </div><!--boot3-->
     </div><!--row-->
-   
- </div>
-   
-    
+</div>
+
+
 <script src="js/popper.min.js"></script>
  <script src="js/jquery-3.7.1.min.js"></script>
 <script src="js/bootstrap.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
+<script>
+  $(function () {
+    var star = '.star',
+      selected = '.selected';
+  
+    $(star).on('click', function () {
+      $(selected).each(function () {
+        $(this).removeClass('selected');
+      });
+      $(this).addClass('selected');
+    });
+  
+  });
+  </script>

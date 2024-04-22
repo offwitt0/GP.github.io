@@ -302,8 +302,25 @@ border-bottom-right-radius: 20px;
    padding-left: 45px;
    margin-top: -24px;
  }
+ @media (min-width: 992px) {
+   .whole {
+     width: 80%;
+     margin: 0 auto; 
+   }
+ }
  /*doctors*/
  /*blogs*/
+ .parent {
+   max-width: 1300px; 
+   margin: 0 auto; 
+ }
+ 
+ @media (max-width: 768px) {
+   .parent {
+     max-width: none; 
+     margin: 0; 
+   }
+ }
  .blogadd{
    text-align: center;
    margin-top: -55px;
@@ -311,8 +328,6 @@ border-bottom-right-radius: 20px;
    color:#003470 ;
  }
  .parent{
-   width: 100%;
-   height: auto;
  overflow: hidden; 
  background-color:#dbecf0;;
  position: relative;
@@ -320,7 +335,7 @@ border-bottom-right-radius: 20px;
  }
  .blog1{
    height: 465px;
-   width: 430px;
+   width: 400px;
    margin-top: 30px;
    z-index: 0;
  }
@@ -350,11 +365,6 @@ border-bottom-right-radius: 20px;
    -ms-transform: scale(1.1,1.1);
    -o-transform: scale(1.1,1.1);
 }
- #infoblog1{
-  height: 450px;
-  width: 430px;
-
- }
  .addimg{
    width: 50px;
    height: 50px;
@@ -365,7 +375,7 @@ border-bottom-right-radius: 20px;
    -o-border-radius: 50%;
 }
  #infoblog{
-   width: 430px;
+   width: 400px;
    height: 197px;
   margin-top:5 px;
   margin-right: 140px;
@@ -383,7 +393,7 @@ border-bottom-right-radius: 20px;
    border-radius: 5px;
    width: 150px;
    height: 50px;
-   margin-left: 250px;
+   margin-left: 220px;
    font-size: 20px;
    -webkit-border-radius: 5px;
    -moz-border-radius: 5px;
@@ -414,6 +424,47 @@ border-bottom-right-radius: 20px;
    border-top-left-radius: 90px;
    border-bottom-right-radius: 90px;
 }
+.vote {
+   display: flex;
+   align-items: center;
+   border: 1px solid #ccc;
+   border-radius: 20px;
+   padding: 6px;
+   width: 110px;
+   -webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   -ms-border-radius: 20px;
+   -o-border-radius: 20px;
+}
+ .arrow {
+   width: 34px;
+   height: 24px;
+   background-color: #4789d4;
+   mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%234CAF50"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 2l8 9H4z" fill="white"/></svg>'); /* أيقونة السهم */
+   mask-size: cover;
+   cursor: pointer;
+   margin-top: 5px;
+ }
+ .separator {
+   height: 24px;
+   width: 1px;
+   background-color: #867878;
+   margin: 0 12px;
+ }
+ .count {
+   font-size: 16px;
+   color: #333; 
+ }
+ #vote3 {
+   display: flex;
+   flex-direction: column;
+ }
+ 
+ .title-vote {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+ }
 /*blogs*/
 /*see all*/
 .parent0{
@@ -433,13 +484,13 @@ border-bottom-right-radius: 20px;
  }
  .aboutas{
    height: 85%;
-   width: 40%;
+   width: 30%;
    margin-top: 50px;
    margin-left: -110px;
  }
  #card3{
-   margin-top: 90px;
-   width: 600px;
+   margin-top: 70px;
+   width: 550px;
    height: 1000px;
    background-color:#D7DDDF;
  }
@@ -556,10 +607,13 @@ width: 250px;
 }
 .line22{
    margin-top: 40px;
-   margin-left: 20px;
 }
 .title555{
    color:#00B3DE ;
+   margin-left: -30px;
+}
+.para444{
+   margin-left: -30px;
 }
 /*about as*/
 /*footer*/
@@ -745,6 +799,7 @@ color: #7196db;
    display: inline-block;
    border-radius: 16px;
 }
+
 .Ser:hover{
    transform: scale(1,1.2);
    transition: 2s;
@@ -807,6 +862,40 @@ color: #7196db;
    margin-top: 40px;
    color: #4789d4;
     font-weight: bold; 
+}
+.ratings {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   width: 100%;
+   direction: rtl;
+   text-align: center;
+}
+
+.star {
+   position: relative;
+   line-height: 60px;
+   display: inline-block;
+   transition: color 0.2s ease;
+   color: gray;
+}
+
+.star:before {
+   content: '\2605';
+   width: 60px;
+   height: 60px;
+   font-size: 60px;
+}
+.star:hover,
+.star.selected,
+.star:hover~.star,
+.star.selected~.star {
+   transition: color 0.8s ease;
+   color: gold;
+}
+.input-group input[type="time"] {
+  margin-top: 5px;
+   
 }
 /*view profile*/
 /*view profile2*/
@@ -1070,6 +1159,51 @@ margin-top: -30px;
    color: white;
    margin-top: 215px;
 }
+.message {
+   display: block;
+    background-color: #f1f0f0;
+    padding: 15px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    overflow-wrap: break-word;
+}
+#message5{
+   border: none;
+   border-radius: 5px;
+   padding: 9px;
+   margin-left: 10px;
+   cursor: pointer;
+   background-color:#4789d4;
+   color: white;
+   margin-top: 215px;
+}
+/*الكود ده علشان الفلتر التانى يشتغل*/
+.dropdown {
+   position: relative;
+   display: inline-block;
+ }
+
+ .dropdown-content {
+   display: none;
+   position: absolute;
+   background-color: #f1f1f1;
+   min-width: 160px;
+   z-index: 1;
+   border: 1px solid #ddd;
+   padding: 5px;
+   border-radius: 3px;
+ }
+
+ .dropdown-content i {
+   cursor: pointer;
+   margin: 5px;
+ }
+
+ /* Show the dropdown menu when the icon is clicked */
+ .dropdown:hover .dropdown-content {
+   display: block;
+ }
+ /*لحد هنا*/
 .face3{
 margin-top: -30px;
  margin-left: 45px;
@@ -1155,10 +1289,9 @@ margin-top: -30px;
 /*Alarm*/
 .main{
    background-color:#dbecf0; 
-   
 }
 #alaa{
-   margin-top: 80px;
+   margin-top: 100px;
    text-align: center;
 }
 .title50{
@@ -1171,12 +1304,16 @@ margin-top: -30px;
 }
 table{
    background-color: white;
-
+   position: relative;
 }
 th,td{
    color: #003470;
 }
 /*sidebar*/
+.SideBar{
+   margin-left: 150px;
+   margin-top: 20px;
+}
 .sidenav {
    height: 100%;
    width: 0;
